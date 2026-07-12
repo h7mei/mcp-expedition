@@ -1,0 +1,28 @@
+{
+  "name": "io.github.example/mcp-expedition-workspace",
+  "description": "Local Workspace MCP server for searching and summarizing approved project directories",
+  "version": "0.1.0",
+  "status": "not-published",
+  "repository": "https://github.com/example/mcp-expedition",
+  "homepage": "https://github.com/example/mcp-expedition",
+  "transport": {
+    "type": "stdio",
+    "command": "node",
+    "args": ["servers/workspace-server/dist/main.js"]
+  },
+  "capabilities": {
+    "tools": ["search_documents", "create_report"],
+    "resources": ["workspace://summary"],
+    "prompts": ["review_project"]
+  },
+  "environment": {
+    "MCP_WORKSPACE_ROOT": {
+      "description": "Absolute or relative path to the approved workspace root",
+      "required": true
+    },
+    "MCP_MAX_FILE_SIZE_BYTES": {
+      "description": "Maximum file size read during search",
+      "required": false
+    }
+  }
+}

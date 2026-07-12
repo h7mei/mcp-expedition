@@ -1,0 +1,18 @@
+{
+  "name": "@mcp-expedition/tests",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "mkdir -p dist && printf '' > dist/.gitkeep",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:integration": "vitest run"
+  },
+  "devDependencies": {
+    "@mcp-expedition/expedition-cli": "workspace:*",
+    "@mcp-expedition/workspace-server": "workspace:*",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "workspace": {
+      "command": "node",
+      "args": ["servers/workspace-server/dist/main.js"],
+      "env": {
+        "MCP_WORKSPACE_ROOT": "./examples/sample-workspace",
+        "LOG_LEVEL": "info"
+      }
+    }
+  }
+}

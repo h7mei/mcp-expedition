@@ -1,0 +1,44 @@
+{
+  "name": "@mcp-expedition/workspace-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/main.js",
+  "types": "./dist/main.d.ts",
+  "bin": {
+    "mcp-expedition-workspace": "./dist/main.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    }
+  },
+  "files": [
+    "dist",
+    "fixtures"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "MCP_WORKSPACE_ROOT=\"${MCP_WORKSPACE_ROOT:-../../examples/sample-workspace}\" tsx watch src/main.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run test/unit",
+    "test:integration": "vitest run test/integration",
+    "start": "MCP_WORKSPACE_ROOT=\"${MCP_WORKSPACE_ROOT:-../../examples/sample-workspace}\" node dist/main.js",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@mcp-expedition/permission-engine": "workspace:*",
+    "@mcp-expedition/shared-config": "workspace:*",
+    "@mcp-expedition/shared-schemas": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "pino": "^9.7.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,81 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Turborepo / caches
+.turbo/
+.cache/
+.eslintcache
+.stylelintcache
+.npm/
+
+# Test / coverage
+coverage/
+.nyc_output/
+reports/
+apps/**/reports/
+servers/**/reports/
+tests/dist/
+
+# Environment & secrets (keep *.example tracked)
+.env
+.env.*
+!.env.example
+!**/.env.example
+!**/.env*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.p8
+id_rsa
+id_rsa.*
+credentials.json
+**/credentials.json
+*service-account*.json
+*serviceAccount*.json
+
+# Logs & temp
+*.log
+.pnpm-debug.log*
+logs/
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# Editors / IDEs (no shared .vscode/ in this repo yet)
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Cursor local state (not for public repos)
+.cursor/
+
+# Local overrides / machine-specific
+*.local
+
+# Yarn (Berry) local — keep shared config if adopted later
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
