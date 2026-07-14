@@ -34,7 +34,7 @@
     "@mcp-expedition/shared-schemas": "workspace:*",
     "@modelcontextprotocol/sdk": "^1.15.0",
     "pino": "^9.7.0",
-    "zod": "^3.25.76"
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "tsx": "^4.20.3",
