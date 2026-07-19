@@ -24,7 +24,7 @@
     "@mcp-expedition/protocol-tracer": "workspace:*",
     "@mcp-expedition/shared-config": "workspace:*",
     "@mcp-expedition/shared-schemas": "workspace:*",
-    "commander": "^14.0.0"
+    "commander": "^15.0.0"
   },
   "devDependencies": {
     "tsx": "^4.20.3",
